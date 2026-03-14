@@ -24,6 +24,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       monochromeImage: "./assets/android-icon-monochrome.png",
     },
     predictiveBackGestureEnabled: false,
+    package: "com.yuutakkuma.rn.hybrid.playground",
   },
   web: {
     favicon: "./assets/favicon.png",
@@ -36,4 +37,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       },
     ],
   ],
+  extra: {
+    eas: {
+      projectId: "11deb5a2-f2fc-4d78-8cbe-589bbc6d3c11",
+    },
+  },
 });
