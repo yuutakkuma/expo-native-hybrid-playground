@@ -8,8 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "build-pre-android": "eas build --profile preview -platform android",
-    "build-sim-android": "eas build --profile sim -platform android"
+    "build-pre-android": "eas build --profile preview --platform android",
+    "build-sim-android": "eas build --profile sim --platform android"
   },
   "dependencies": {
     "expo": "~55.0.6",
