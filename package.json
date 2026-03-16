@@ -4,12 +4,14 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web",
     "lint": "expo lint",
     "build-pre-android": "eas build --profile preview --platform android",
-    "build-sim-android": "eas build --profile sim --platform android"
+    "build-pre-ios": "eas build --profile preview --platform ios",
+    "build-sim-android": "eas build --profile sim --platform android",
+    "build-sim-ios": "eas build --profile sim --platform ios"
   },
   "dependencies": {
     "expo": "~55.0.6",

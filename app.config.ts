@@ -1,5 +1,7 @@
 import { ExpoConfig, ConfigContext } from "expo/config";
 
+const bundleIdentifier = "com.yuutakkuma.rn.hybrid.playground";
+
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: "expo-native-hybrid-playground",
@@ -15,6 +17,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   ios: {
     supportsTablet: true,
+    bundleIdentifier: bundleIdentifier,
+    infoPlist: {
+      ITSAppUsesNonExemptEncryption: false,
+    },
   },
   android: {
     adaptiveIcon: {
@@ -24,7 +30,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       monochromeImage: "./assets/android-icon-monochrome.png",
     },
     predictiveBackGestureEnabled: false,
-    package: "com.yuutakkuma.rn.hybrid.playground",
+    package: bundleIdentifier,
   },
   web: {
     favicon: "./assets/favicon.png",
